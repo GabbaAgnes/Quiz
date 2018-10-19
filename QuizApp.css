@@ -1,0 +1,31 @@
+#quiz-form{
+    background: pink;
+    width: 400px;
+    margin:0 auto;
+    padding-top: 20px;
+}
+#page{
+    background: rgb(206, 85, 105);
+    width: 400px;
+    margin:0 auto;
+    padding-bottom: 50px;
+}
+#result,#welcome{
+    opacity: 0;
+    transition: all .3s;
+    width: 80%;
+    height: 80%;
+    position: fixed;
+    margin: auto;
+    top: -100vh;
+    left:0;
+    right:0;
+    background: blue;
+
+
+}
+.show#result,.show#welcome{
+    opacity: 1;
+    top:0;
+    bottom: 0;
+}
