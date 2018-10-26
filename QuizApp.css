@@ -1,31 +1,247 @@
+body{
+    background: url(https://media.giphy.com/media/rWY9ySfjytitq/giphy.gif);
+	background-repeat: repeat 4;
+	background-size: cover;
+}
+
+legend{
+
+    font-size: 35px;
+    margin: 0;
+    Padding-left:50px;
+    padding-top: 10px;
+    font-family: sans-serif;
+    text-shadow: 0 5px 15px rgba(0,0,0,.3);
+    text-transform: uppercase;
+    border: 5px solid orange;
+    border-top: none;
+}
+
+legend span{
+    position: relative;
+    display: inline-block;
+}
+
+legend span:nth-child(4)
+{
+     color: rgb(157, 243, 136);
+     animation: animate 2s alternate infinite;
+
+}
+
+@keyframes animate{
+     0% {
+         transform: translateY(0px) rotate(0deg);
+     }
+     40% {
+        transform: translateY(0px) rotate(0deg);
+    }
+     50% {
+        transform: translateY(-100px) rotate(180deg);
+    }
+     60% {
+        transform: translateY(0px) rotate(360deg);
+    }
+     100% {
+        transform: translateY(0px) rotate(360deg);
+    }
+}
+
 #quiz-form{
-    background: pink;
-    width: 400px;
+    background: #C6FFDD;  
+    background: -webkit-linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+    background: linear-gradient(to right, #f7797d, #FBD786, #C6FFDD);
+    width: 320px;
     margin:0 auto;
-    padding-top: 20px;
+    padding-top: 40px;
+    box-shadow: 3px 3px red, -1em 0 0.4em olive;
 }
 #page{
-    background: rgb(206, 85, 105);
-    width: 400px;
+    font-size: 30px;
+    color: #145b7b;
+    padding-left:30px;
+    background: #40E0D0;
+    background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0); 
+    background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0); 
+    width: 35%;
     margin:0 auto;
-    padding-bottom: 50px;
-}
-#result,#welcome{
+    padding-bottom: 20px;
+    box-shadow: inset 0 0 1em gold, 0 0 1em red;
     opacity: 0;
-    transition: all .3s;
-    width: 80%;
-    height: 80%;
+    transition: all .5s;
+
+}
+
+@media (min-width:500px) {
+    #quiz-form{
+        background: #E8CBC0; 
+        background: -webkit-linear-gradient(to right, #636FA4, #E8CBC0);  
+        background: linear-gradient(to right, #636FA4, #E8CBC0); 
+        margin:0 auto;
+        padding-top: 40px;
+        box-shadow: 3px 3px red, -1em 0 0.4em olive;
+    }
+
+
+}
+
+@media (min-width:800px) {
+    #quiz-form{
+        background: #FFAFBD;  
+        background: -webkit-linear-gradient(to right, #ffc3a0, #FFAFBD);  
+        background: linear-gradient(to right, #ffc3a0, #FFAFBD); 
+        margin:0 auto;
+        padding-top: 40px;
+        box-shadow: 3px 3px red, -1em 0 0.4em olive;
+    }
+
+
+}
+
+#result,#welcome,#end{
+    color: rgb(248, 215, 215);
+    font-size:30px;
+    opacity: 0;
+    transition: all .5s;
+    width: 60%;
+    height: 60%;
     position: fixed;
     margin: auto;
     top: -100vh;
     left:0;
     right:0;
-    background: blue;
-
-
+    background: #000000;  
+    background: -webkit-linear-gradient(to right, #0f9b0f, #000000); 
+    background: linear-gradient(to right, #0f9b0f, #000000); 
+    box-shadow: 12px 12px 2px 1px rgba(14, 71, 27, 0.801)
 }
-.show#result,.show#welcome{
+
+.show#result,.show#welcome,.show#end{
     opacity: 1;
     top:0;
     bottom: 0;
+}
+
+.show#page{
+    opacity: 1;
+    
+
+
+}
+div{
+    color: rgb(172, 23, 80);
+    font-size: 33px;
+}
+
+@media (min-width: 400px) {
+    div{
+        font-size: 34px;
+        color: rgb(109, 19, 54);
+    } 
+}
+
+@media (min-width: 700px) {
+    div{
+        font-size: 35px;
+        color: rgb(32, 15, 21);
+    } 
+}
+
+#welcome{
+    color: rgb(250, 247, 102);
+    font-size: 40px;
+    text-align: center;
+    
+}
+#welcome span:nth-child(1){
+    font-family: fantasy;
+}
+
+#welcome span:nth-child(2){
+    animation: blink 2s infinite;
+}
+
+@keyframes blink {
+     0% { opacity: 1.0;}
+     50% { opacity: 0.0;}
+     100% { opacity: 1.0;}
+
+}
+
+
+
+button{
+    background: #108dc7; 
+    background: -webkit-linear-gradient(to right, #ef8e38, #108dc7); 
+    background: linear-gradient(to right, #ef8e38, #108dc7); 
+    box-shadow: 10px 5px 5px black;
+    font-size: 30px;
+    font-weight: bold;
+
+}
+
+
+
+input{
+    font-size: 30px;
+    color: rgb(24, 70, 15);
+    background: #005AA7; 
+    background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7); 
+    background: linear-gradient(to right, #FFFDE4, #005AA7); 
+    background: -webkit-linear-gradient(to right, #ef8e38, #108dc7); 
+    background: linear-gradient(to right, #ef8e38, #108dc7); 
+    box-shadow: 10px 5px 5px black;
+    transition-duration: 800ms;
+
+
+}
+
+input:hover {
+    font-size: 33px;
+    color: rgb(24, 70, 15);
+    background: rgb(187, 163, 56); 
+    background: -webkit-linear-gradient(to right, #FFFDE4, #005AA7); 
+    box-shadow: 10px 5px 5px black;
+    transform: rotate(5deg)
+
+
+}
+
+
+label{
+    font-size: 30px;
+    color: rgb(66, 64, 64);
+    
+
+}
+
+label:hover {
+    font-weight: bold;
+    color: red;
+    
+
+}
+.score{
+    color: rgb(248, 121, 142);
+    font-size: 35px;
+    font-weight: bold;
+    font-family: cursive;
+    animation: blink 2s infinite;
+
+
+}
+
+@keyframes blink {
+     0% { opacity: 1.0;}
+     50% { opacity: 0.0;}
+     100% { opacity: 1.0;}
+
+}
+
+#end{
+    font-family: cursive;
+    font-size: 33px;
+    text-align: center;
+
+
 }

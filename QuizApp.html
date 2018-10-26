@@ -1,33 +1,52 @@
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>We Animals</title>
     <link href="QuizApp.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
     
-  </head>
-  <body>
-      <div id="welcome" class="show">Welcome <button id="begin">Begin</button></div>
-    <form id="quiz-form">
+    <header>Welcome to the aminal quiz</header>
+    <main role="main" aria-live="assertive">
+        <form id="quiz-form">
+           <legend>
         
+            <span>A</span>
+            <span>n</span>
+            <span>i</span>
+            <span>m</span>
+            <span>a</span>
+            <span>l</span>
+            <span>s</span>
+        </legend> 
 
-    </form>
-
-
+            
+        </form>
+        <div id="welcome" class="show"><span>Welcome</span> <span>(☞ﾟ∀ﾟ)☞</span>
+            <button tabindex="1" id="begin">Begin</button>
+        </div>
         <div id="result">
-          <p></p>
-          <button id="next">next</button>
-        </div> 
+            <p></p>
+            <h5 class="score">Score 0 of 7 </h5>
+            <button tabindex="3" id="next">next</button>
+        </div>
+        <div id="end">End of the Game !!!
+            <h5 class="score">Score 0 of 7 </h5>
+            <button tabindex="4" id="restart">Restart Game</button>
+        </div>
+    </main>
+    <footer>
+        <p id="page">Question 0 of 7 </p>
 
-        <footer>
-            <p id="page">Question x of y </p>
-        </footer>
+    </footer>
+  
+</body>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="QuizApp.js"></script>
 
-
-    
-    
-  </body>
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
-  <script type="text/javascript" src="QuizApp.js"></script>
-  </html>
+</html>
